@@ -54,6 +54,23 @@ This analysis uses $pp$ collision data collected from 2015 to 2018 by the ATLAS 
 \subsection{Signal Samples}
 \label{subsec:SignalSample}
 
+This paragraph describes MC samples used for each signal event's estimation. The summary is shown in Table \ref{tab:SigSampleSummary}.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular*}{160mm}{@{\extracolsep{\fill}}lllll}
+    \hline\hline
+    Physics process & Generator & PS generator & Normalisation & PDF set\\
+    \hline
+    $tbH^{+}$ ($M_{H^{+}}\leq3.0$ TeV)  & MG5\_aMC 2.6.2 & Pythia 8.212 & NLO & NNPDF2.3NLO\\
+    $tbH^{+}$ ($M_{H^{+}}=4.0,5.0$ TeV) & MG5\_aMC 2.8.1 & Pythia 8.244 & NLO & NNPDF3.0NLO\\
+    $tbW'$                              & MG5\_aMC 2.9.9 & Pythia 8.307 & NLO & NNPDF3.0NLO\\
+    \hline\hline
+  \end{tabular*}
+  \caption{Nominal simulated signal event samples. The generator, parton shower generator and cross-section used for normalisation are shown together with the applied PDF set.}
+  \label{tab:SigSampleSummary}
+\end{table}
+
 \subsubsection{$\bar{t}bH^{+}$ Samples}
 \label{subsec:HpSample}
 
@@ -64,7 +81,7 @@ The $H^{+}$ signal samples are generated with MadGraph5\_aMCatNLO (MG5\_aMC) \ci
 
 \begin{table}[H]
   \centering
-  \begin{tabular*}{170mm}{@{\extracolsep{\fill}}cccccc}
+  \begin{tabular*}{160mm}{@{\extracolsep{\fill}}cccccc}
     \hline\hline
     DSID   & $H^{+}$ mass [GeV] & Size & ${\sigma}^{\text{MG5\_aMC}}$ [fb] & ${\sigma}_{\tan{\beta}=1}^{\text{MSSM}}$ [fb] & ${\sigma}_{\tan{\beta}=60}^{\text{MSSM}}$ [fb]\\
     \hline
@@ -84,4 +101,5 @@ The $H^{+}$ signal samples are generated with MadGraph5\_aMCatNLO (MG5\_aMC) \ci
   \label{tab:SignalSamples}
 \end{table}
 
-{\color{red}{The $W'$ sample is produced only privately at this point. In this version of the note, all information regarding $W'$ is summarised in Section~\ref{sec:PrepareWprime}.}}
+%{\color{red}{The $W'$ sample is produced only privately at this point. In this version of the note, all information regarding $W'$ is summarised in Section~\ref{sec:PrepareWprime}.}}
+
