@@ -1,32 +1,32 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [1] Config.pm:305> INFO - Logfile is 'ANA-HDBS-2020-09-INT1.blg'
-[27] biber:313> INFO - === Wed Nov 30, 2022, 10:45:30
-[51] Biber.pm:371> INFO - Reading 'ANA-HDBS-2020-09-INT1.bcf'
-[99] Biber.pm:857> INFO - Found 57 citekeys in bib section 0
-[109] Biber.pm:3981> INFO - Processing section 0
-[121] Biber.pm:4154> INFO - Looking for bibtex format file 'ANA-HDBS-2020-09-INT1.bib' for section 0
-[125] bibtex.pm:1468> INFO - LaTeX decoding ...
-[157] bibtex.pm:1294> INFO - Found BibTeX data source 'ANA-HDBS-2020-09-INT1.bib'
-[160] Utils.pm:169> WARN - Duplicate entry key: 'HDBS-2021-02' in file 'ANA-HDBS-2020-09-INT1.bib', skipping ...
-[228] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/ATLAS.bib' for section 0
-[280] bibtex.pm:1468> INFO - LaTeX decoding ...
-[1376] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/ATLAS.bib'
-[1489] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/CMS.bib' for section 0
-[1535] bibtex.pm:1468> INFO - LaTeX decoding ...
-[2629] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/CMS.bib'
-[2700] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/ConfNotes.bib' for section 0
-[2737] bibtex.pm:1468> INFO - LaTeX decoding ...
-[3278] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/ConfNotes.bib'
-[3352] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/PubNotes.bib' for section 0
-[3366] bibtex.pm:1468> INFO - LaTeX decoding ...
-[3534] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/PubNotes.bib'
-[3562] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/ATLAS-useful.bib' for section 0
-[3574] bibtex.pm:1468> INFO - LaTeX decoding ...
-[3735] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/ATLAS-useful.bib'
-[3837] UCollate.pm:68> INFO - Overriding locale 'en-UK' defaults 'variable = shifted' with 'variable = non-ignorable'
-[3838] UCollate.pm:68> INFO - Overriding locale 'en-UK' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[3838] Biber.pm:3809> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-UK'
-[3839] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-UK'
-[3871] bbl.pm:617> INFO - Writing 'ANA-HDBS-2020-09-INT1.bbl' with encoding 'UTF-8'
-[3887] bbl.pm:720> INFO - Output to ANA-HDBS-2020-09-INT1.bbl
-[3887] Biber.pm:110> INFO - WARNINGS: 1
+[25] biber:313> INFO - === Mon Jan 23, 2023, 18:55:31
+[61] Biber.pm:371> INFO - Reading 'ANA-HDBS-2020-09-INT1.bcf'
+[121] Biber.pm:857> INFO - Found 121 citekeys in bib section 0
+[133] Biber.pm:3981> INFO - Processing section 0
+[146] Biber.pm:4154> INFO - Looking for bibtex format file 'ANA-HDBS-2020-09-INT1.bib' for section 0
+[153] bibtex.pm:1468> INFO - LaTeX decoding ...
+[189] bibtex.pm:1294> INFO - Found BibTeX data source 'ANA-HDBS-2020-09-INT1.bib'
+[192] Utils.pm:169> WARN - Duplicate entry key: 'HDBS-2021-02' in file 'ANA-HDBS-2020-09-INT1.bib', skipping ...
+[340] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/ATLAS.bib' for section 0
+[393] bibtex.pm:1468> INFO - LaTeX decoding ...
+[1496] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/ATLAS.bib'
+[1643] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/CMS.bib' for section 0
+[1688] bibtex.pm:1468> INFO - LaTeX decoding ...
+[2869] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/CMS.bib'
+[2978] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/ConfNotes.bib' for section 0
+[3014] bibtex.pm:1468> INFO - LaTeX decoding ...
+[3605] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/ConfNotes.bib'
+[3690] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/PubNotes.bib' for section 0
+[3704] bibtex.pm:1468> INFO - LaTeX decoding ...
+[3897] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/PubNotes.bib'
+[3936] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/ATLAS-useful.bib' for section 0
+[3948] bibtex.pm:1468> INFO - LaTeX decoding ...
+[4131] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/ATLAS-useful.bib'
+[4387] UCollate.pm:68> INFO - Overriding locale 'en-UK' defaults 'variable = shifted' with 'variable = non-ignorable'
+[4388] UCollate.pm:68> INFO - Overriding locale 'en-UK' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[4388] Biber.pm:3809> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-UK'
+[4389] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-UK'
+[4451] bbl.pm:617> INFO - Writing 'ANA-HDBS-2020-09-INT1.bbl' with encoding 'UTF-8'
+[4487] bbl.pm:720> INFO - Output to ANA-HDBS-2020-09-INT1.bbl
+[4488] Biber.pm:110> INFO - WARNINGS: 1
