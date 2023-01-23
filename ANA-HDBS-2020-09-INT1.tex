@@ -28,6 +28,7 @@
 %  paper=a4|letter       Set paper size to A4 (default) or letter.
 
 %-------------------------------------------------------------------------------
+
 % Extra packages:
 \usepackage[]{\ATLASLATEXPATH atlaspackage}
 % Commonly used options:
@@ -72,6 +73,8 @@
 \usepackage{ANA-HDBS-2020-09-INT1-defs}
 \usepackage{color}
 \usepackage{multirow}
+\usepackage{longtable}
+\usepackage{mathtools}
 %% \usepackage[hang,small,bf]{caption}
 %% \usepackage[subrefformat=parens]{subcaption}
 %% \captionsetup{compatibility=false}
@@ -115,35 +118,35 @@
 \clearpage
 %% %----------------------------------------------------------------------
 
-% %----------------------------------------------------------------------
-% \input{sections/sec3/src/ANA-HDBS-2020-09-INT1-sec3}
-% \clearpage
-% %----------------------------------------------------------------------
+%----------------------------------------------------------------------
+\input{sections/ObjectReco}
+\clearpage
+%----------------------------------------------------------------------
 
-% %----------------------------------------------------------------------
-% \input{sections/sec4/src/ANA-HDBS-2020-09-INT1-sec4}
-% \clearpage
-% %----------------------------------------------------------------------
+%----------------------------------------------------------------------
+\input{sections/AnalysisStrategy}
+\clearpage
+%----------------------------------------------------------------------
 
-% %----------------------------------------------------------------------
-% \input{sections/sec5/src/ANA-HDBS-2020-09-INT1-sec5}
-% \clearpage
-% %----------------------------------------------------------------------
+%----------------------------------------------------------------------
+\input{sections/BkgModeling}
+\clearpage
+%----------------------------------------------------------------------
 
-% %----------------------------------------------------------------------
-% \input{sections/sec6/src/ANA-HDBS-2020-09-INT1-sec6}
-% \clearpage
-% %----------------------------------------------------------------------
+%----------------------------------------------------------------------
+\input{sections/Systematics}
+\clearpage
+%----------------------------------------------------------------------
 
-% %----------------------------------------------------------------------
-% \input{sections/sec7/src/ANA-HDBS-2020-09-INT1-sec7}
-% \clearpage
-% %-----------------------------------------------------------------------
+%----------------------------------------------------------------------
+\input{sections/ProfileLHFit}
+\clearpage
+%-----------------------------------------------------------------------
 
-% %% %----------------------------------------------------------------------
-% %% \input{sections/sec8/src/ANA-HDBS-2020-09-INT1-sec8}
-% %% \clearpage
-% %% %-----------------------------------------------------------------------
+%----------------------------------------------------------------------
+\input{sections/Summary}
+\clearpage
+%-----------------------------------------------------------------------
 
 % %% %----------------------------------------------------------------------
 % %% \input{sections/sec9/src/ANA-HDBS-2020-09-INT1-sec9}
@@ -176,37 +179,39 @@
 % %% Place your conclusion here.
 
 
-% %-------------------------------------------------------------------------------
-% % If you use biblatex and either biber or bibtex to process the bibliography
-% % just say \printbibliography here
-% \printbibliography
-% % If you want to use the traditional BibTeX you need to use the syntax below.
-% %\bibliographystyle{bib/bst/atlasBibStyleWithTitle}
-% %\bibliography{ANA-HDBS-2020-09-INT1,bib/ATLAS,bib/CMS,bib/ConfNotes,bib/PubNotes}
-% %-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% If you use biblatex and either biber or bibtex to process the bibliography
+% just say \printbibliography here
+\printbibliography
+% If you want to use the traditional BibTeX you need to use the syntax below.
+%\bibliographystyle{bib/bst/atlasBibStyleWithTitle}
+%\bibliography{ANA-HDBS-2020-09-INT1,bib/ATLAS,bib/CMS,bib/ConfNotes,bib/PubNotes}
+%-------------------------------------------------------------------------------
 
-% %-------------------------------------------------------------------------------
-% % Print the list of contributors to the analysis
-% % The argument gives the fraction of the text width used for the names
-% %-------------------------------------------------------------------------------
-% %\clearpage
-% %% The supporting notes for the analysis should also contain a list of contributors.
-% %% This information should usually be included in \texttt{mydocument-metadata.tex}.
-% %% The list should be printed either here or before the Table of Contents.
-% %% \PrintAtlasContribute{0.30}
+%-------------------------------------------------------------------------------
+% Print the list of contributors to the analysis
+% The argument gives the fraction of the text width used for the names
+%-------------------------------------------------------------------------------
+%\clearpage
+%% The supporting notes for the analysis should also contain a list of contributors.
+%% This information should usually be included in \texttt{mydocument-metadata.tex}.
+%% The list should be printed either here or before the Table of Contents.
+%% \PrintAtlasContribute{0.30}
 
 
-% %-------------------------------------------------------------------------------
-% \clearpage
-% \appendix
-% \part*{Appendices}
-% \addcontentsline{toc}{part}{Appendices}
+%-------------------------------------------------------------------------------
+\clearpage
+\appendix
+\part*{Appendices}
+\addcontentsline{toc}{part}{Appendices}
 
-% \input{appendices/app1/src/ANA-HDBS-2020-09-INT1-app1}
-% \clearpage
+\input{appendices/TOPQ1DAOD.tex}
+\clearpage
 
-% \input{appendices/app2/src/ANA-HDBS-2020-09-INT1-app2}
-% \clearpage
+
+\input{appendices/SigBkgComparison.tex}
+\clearpage
+
 
 % \input{appendices/app3/src/ANA-HDBS-2020-09-INT1-app3}
 % \clearpage

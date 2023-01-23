@@ -1,21 +1,16 @@
-\textbf{Remaining to do}
-
-\begin{description}
-
-\item[The reweighting method:] A complete proposal is to be discussed at the EB request (HBSM meeting) on 21st July, and incorporate comments and discussions there for the method, summarize them in the note in 1-2 weeks after the meeting.
-
-\item[$W'$ MC production:] Validations are to be finalized by the end of July so that the MC generator can be implemented into the ATLAS official software. We aim for finishing the MC production as well as limit evaluations by the end of September. This is to be done in parallel to EB review, as agreed with the HBSM / HDBS conveners.
-
-\item[Theoretical interpretation: ] Interpret limits in terms of the theoretical H+/W' scenarios, such as hMSSM and XXX. This will be done by the end of September.
-
-\end{description}
-
-
 \textbf{Version log with major updates:}\\
 %%% Updated in v1.1
 \textbf{\color{blue}v1.1:}
+
 \begin{itemize}
-  \item Filled the Section \ref{subsec:ReweightingTechnique} that describes the reweighting technique.
-  \item Added the Figures \ref{fig:SOVERB_bdt_Hp1000_equivBinning_geq1tgeq2b_ForRW} to \ref{fig:SOVERB_bdt_Hp5000_equivBinning_geq1tgeq2b_ForRW} in Appendix \ref{subapp:SOVERB_BDTOutput} to show BDT output distributions of events used for derivating reweighting factors.
-  \item Updated the Table \ref{tb:SystSources} and the Section \ref{subsec:SystOfBkgModeling} with the systematics source of $t\bar{t}+\text{jets}$ reweighting included. (The original Section 5.4 that describes the reweighting systematics sources was put into the Section \ref{subsec:SystOfBkgModeling})
+    \item \textbf{Changed analysis regions (Section \ref{subsubsec:RegionDefUnder3TeV})}
+    \item \textbf{Adopted the cut-and-counting approach for the signal above 3 TeV (Section \ref{subsec:AnaStrategyAbove3TeV})}
+    \item \textbf{Developed the reweighting technique to improve $t\Bar{t}+\text{jets}$ MC prediction (Section \ref{subsec:ReweightingTechnique})}
+    \item \textbf{Systematics}
+    \begin{itemize}
+        \item $b$-tagging calibration uncertainty sources of PCBT are replaced into the ones of FixedCut to consider $p_{\text{T}}$ extrapolation.
+        \item Systematic uncertainties from the reweighting are included (Section \ref{subsec:SystOfTtbar}).
+        \item $t\Bar{t}+\geq1b$ fraction uncertainty to the whole of $t\Bar{t}+\text{HF}$ is considered. (Section \ref{subsec:SystOfTtbar})
+    \end{itemize}
+    \item \textbf{Estimated the cross-section upper limits for $W'_{\text{L/R}}$ signals} 
 \end{itemize}
