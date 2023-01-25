@@ -162,38 +162,13 @@ The $H^{+}$ and $W'$ signal uncertainty is modeled in two ways: by using the PDF
   \item[Systematic uncertainties] \mbox{}\\
     The systematic uncertainties affecting the $t\bar{t}+\text{jets}$ background modeling are summarized in Table \ref{tb:TtbarSystSources}. 
     % --- Normalisation and ttb fraction
-    The normalization of $t\bar{t}+\text{light}$, $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$ are allowed to vary freely in the fit. The normalization factors of $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$ are estimated with a common parameter in the fit. However, since these distribution's shapes are different slightly from each other in the high BDT score region as shown in Figure \ref{fig:CompTtbarShapeInSR1}. Therefore, the uncertainty of the $t\bar{t}+\geq1b$ fraction to the whole of $t\bar{t}+\text{HF}$ can be a systematic source because it changes the whole template shape of $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$. Referring to the post-fit results of the resolved analysis \cite{HDBS-2021-02}, the observed fraction ($R_{\text{ttb}}^{\text{Data}}$) differs from the expected one ($R_{\text{ttb}}^{\text{MC}}$) by about 12\% as follows:
+    The normalization of $t\bar{t}+\text{light}$, $t\bar{t}+\text{HF}$ are allowed to vary freely in the fit. The normalization factors of $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$ are estimated with a common parameter in the fit. However, since these distribution shapes are slightly different from each other in the high BDT score region as shown in Figure \ref{fig:CompTtbarShapeInSR1}. Therefore uncertainty of the fraction between $t\Bar{t}+ \geq 1b$ and $t\Bar{t}+ \geq 1c$ can vary the overall template shape for $t\Bar{t}+ \geq (1b + 1c)$, and consequently affect the estimation of the number of observed signals. Referring to the post-fit results of the resolved analysis \cite{HDBS-2021-02}, the observed fraction ($R_{\text{ttb}}^{\text{Data}}$) differs from the expected one ($R_{\text{ttb}}^{\text{MC}}$) by about 12\% as follows:
     \begin{alignat}{1}
         R_{\text{ttb}}^{\text{MC}} = \frac{\text{N}_{\text{ttb}}^{\text{MC}}}{\text{N}_{\text{ttb}^{\text{MC}}} + \text{N}_{\text{ttc}}^{\text{MC}}} \sim 0.64,
         \quad R_{\text{ttb}}^{\text{Data}} = \frac{\text{N}_{\text{ttb}}^{\text{Data}}}{\text{N}_{\text{ttb}^{\text{Data}}} + \text{N}_{\text{ttc}}^{\text{Data}}} & \sim 0.72,
         \quad \frac{R_{\text{ttb}}^{\text{Data}}}{R_{\text{ttb}}^{\text{MC}}} \sim 0.88 \notag
     \end{alignat}
-    In this analysis, the fraction uncertainty is assumed conservatively enough to be $\pm 50\%$, and an NP is introduced. The total amount of $t\Bar{t}+\text{HF}$ is kept the same after changing the fraction.
-    
-    \begin{figure}[H]
-      \centering
-      \subfloat[]{
-        \includegraphics[width=0.45\textwidth]{images/Systematics/TTBarComparison_bdt_Hp1000_geq1tgeq2j2b.png}
-        \label{fig:CompTtbarShapeInSR1_bdtHp1000}
-      }
-      \subfloat[]{
-        \includegraphics[width=0.45\textwidth]{images/Systematics/TTBarComparison_bdt_Hp3000_geq1tgeq2j2b.png}
-        \label{fig:CompTtbarShapeInSR1_bdtHp3000}
-      }
-      \caption{Comparison of the shape of BDT distributions in the SR1 among $t\Bar{t}+\text{jets}$ events, where (a) is BDT output trained using 1000 GeV $H^{+}$ samples, and (b) is the one trained using 3000 GeV. $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$ distributions are normalised to the distribution of $t\bar{t}+\text{light}$. And the ratios to $t\bar{t}+\text{light}$ distribution are shown at the bottom.}
-      \label{fig:CompTtbarShapeInSR1}
-    \end{figure}
-
-    % --- Normalisation and ttb fraction
-    Besides normalization, the $t\bar{t}+\text{light}$, $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$ processes are affected by different types of uncertainties: $t\bar{t}+\text{light}$ has additional diagrams and profits from relatively precise measurements in data; $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$ can have similar or different diagrams depending on the flavor scheme used for the PDF, and different mass of the $c$- and $b$-quark contribute to additional differences between these two processes. For these reasons, all uncertainties in the $t\bar{t}+\text{jets}$ background modeling are assigned independent nuisance parameters for the $t\bar{t}+\text{light}$, $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$ processes.
-
-    % --- Reweighting
-    Systematic uncertainties on the reweighting are extracted according to the reweighting functions derived in Section \ref{subsec:ReweightingTechnique}. The differences between the BDT output distribution reweighted with the nominal reweighting function and the one reweighted with ${\pm}1{\sigma}$ functions are included in the fit for each $t\bar{t}+\text{jets}$ as an NP.
-    
-    Systematic uncertainties on the acceptance and shapes are extracted from the comparison between the nominal and different MC samples and settings. For ISR and FSR the settings of the nominal Powheg+Pythia sample are varied, resulting in different event weights; the uncertainty due to ISR is estimated by changing $\mu_{r}$ and $\mu_{f}$ in the ME and $\alpha_{S}^{\text{ISR}}$ in the PS, while the uncertainty due to FSR is estimated by changing $\alpha_{S}^{\text{FSR}}$ in the PS. For the ISR, the amount of radiation is increased (decreased) by scaling $\mu_{r}$ and $\mu_{f}$ by a factor 0.5 (2.0) and by using the $\text{Var3cUp (Var3cDown)}$ variation from the A14 tune \cite{ATL-PHYS-PUB-2014-021}, corresponding to $\alpha_{S}^{\text{ISR}}=0.140(0.115)$ instead of the nominal $\alpha_{S}^{\text{ISR}}=0.127$. For the FSR, the amount of radiation is increased (decreased) varying $\mu_{r}$ for QCD emission in the FSR by a factor of 0.5 (2.0), corresponding to $\alpha_{S}^{\text{FSR}}=0.1423(0.1147)$ instead of the nominal $\alpha_{S}^{\text{FSR}}=0.127$. The nominal Powheg+Pythia sample is compared to the Powheg+Herwig sample to access the effect of the PS and hadronization models, and to the MG5\_aMC sample to access the effect of the NLO matching technique.
-
-    %--- 4FS vs. 5FS for ttb
-    The nominal prediction for the dominant $t\bar{t}+\geq1b$ background, based on the Powheg+Phytia $t\bar{t}$ (5FS) sample in which all the additional partons are produced by the PS, is compared to the alternative Powheg+Phythia $t\bar{t}$ (4FS) sample, in which the $b\bar{b}$ pair is generated in addition to the $t\bar{t}$ pair at the ME level at NLO in QCD. A uncertainty resulting from the comparison of the shape of the two models is included.
+    In this analysis, the fraction uncertainty is conservatively assumed to be $\pm 50\%$, considering the different phase spaces with respect to the resolved analysis. The corresponding NP is introduced for the fit model.
 
     %--- ttbar systematic sources table
     \begin{table}[H]
@@ -219,6 +194,31 @@ The $H^{+}$ and $W'$ signal uncertainty is modeled in two ways: by using the PDF
       \caption{Summary of the sources if systematic uncertainty for $t\bar{t}+\text{jets}$ modeling. The systematic uncertainties listed in the second section of the table are evaluated in such a way to have no impact on the normalization of the three, $t\bar{t}+\text{light}$, $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$ components in the phase-space selected in the analysis. The last column of the table indicates the $t\bar{t}+\text{jets}$ components to which a systematic uncertainty is assigned. All systematic uncertainty sources are treated as uncorrelated across the three components.}
       \label{tb:TtbarSystSources}
     \end{table}
+    
+    \begin{figure}[H]
+      \centering
+      \subfloat[]{
+        \includegraphics[width=0.45\textwidth]{images/Systematics/TTBarComparison_bdt_Hp1000_geq1tgeq2j2b.png}
+        \label{fig:CompTtbarShapeInSR1_bdtHp1000}
+      }
+      \subfloat[]{
+        \includegraphics[width=0.45\textwidth]{images/Systematics/TTBarComparison_bdt_Hp3000_geq1tgeq2j2b.png}
+        \label{fig:CompTtbarShapeInSR1_bdtHp3000}
+      }
+      \caption{Comparison of the shape of BDT distributions in the SR1 among $t\Bar{t}+\text{jets}$ events, where (a) is BDT output trained using 1000 GeV $H^{+}$ samples, and (b) is the one trained using 3000 GeV. $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$ distributions are normalised to the distribution of $t\bar{t}+\text{light}$. The ratios to $t\bar{t}+\text{light}$ distribution are shown at the bottom.}
+      \label{fig:CompTtbarShapeInSR1}
+    \end{figure}
+
+    % --- Normalisation and ttb fraction
+    Besides normalization, the $t\bar{t}+\text{light}$, $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$ processes are affected by different types of uncertainties: $t\bar{t}+\text{light}$ has additional diagrams and profits from relatively precise measurements in data; $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$ can have similar or different diagrams depending on the flavor scheme used for the PDF, and different mass of the $c$- and $b$-quark contribute to additional differences between these two processes. For these reasons, all uncertainties in the $t\bar{t}+\text{jets}$ background modeling are assigned independent nuisance parameters for the $t\bar{t}+\text{light}$, $t\bar{t}+\geq1c$ and $t\bar{t}+\geq1b$ processes.
+
+    % --- Reweighting
+    Systematic uncertainties on the reweighting are extracted according to the reweighting functions derived in Section \ref{subsec:ReweightingTechnique}. The differences between the BDT output distribution reweighted with the nominal reweighting function and the one reweighted with ${\pm}1{\sigma}$ functions are included in the fit for each $t\bar{t}+\text{jets}$ as an NP.
+    
+    Systematic uncertainties on the acceptance and shapes are extracted from the comparison between the nominal and different MC samples and settings. For ISR and FSR the settings of the nominal Powheg+Pythia sample are varied, resulting in different event weights; the uncertainty due to ISR is estimated by changing $\mu_{r}$ and $\mu_{f}$ in the ME and $\alpha_{S}^{\text{ISR}}$ in the PS, while the uncertainty due to FSR is estimated by changing $\alpha_{S}^{\text{FSR}}$ in the PS. For the ISR, the amount of radiation is increased (decreased) by scaling $\mu_{r}$ and $\mu_{f}$ by a factor 0.5 (2.0) and by using the $\text{Var3cUp (Var3cDown)}$ variation from the A14 tune \cite{ATL-PHYS-PUB-2014-021}, corresponding to $\alpha_{S}^{\text{ISR}}=0.140(0.115)$ instead of the nominal $\alpha_{S}^{\text{ISR}}=0.127$. For the FSR, the amount of radiation is increased (decreased) varying $\mu_{r}$ for QCD emission in the FSR by a factor of 0.5 (2.0), corresponding to $\alpha_{S}^{\text{FSR}}=0.1423(0.1147)$ instead of the nominal $\alpha_{S}^{\text{FSR}}=0.127$. The nominal Powheg+Pythia sample is compared to the Powheg+Herwig sample to access the effect of the PS and hadronization models, and to the MG5\_aMC sample to access the effect of the NLO matching technique.
+
+    %--- 4FS vs. 5FS for ttb
+    The nominal prediction for the dominant $t\bar{t}+\geq1b$ background, based on the Powheg+Phytia $t\bar{t}$ (5FS) sample in which all the additional partons are produced by the PS, is compared to the alternative Powheg+Phythia $t\bar{t}$ (4FS) sample, in which the $b\bar{b}$ pair is generated in addition to the $t\bar{t}$ pair at the ME level at NLO in QCD. The uncertainty resulting from comparing the shape of the two models is included.
 
     
 \end{description}

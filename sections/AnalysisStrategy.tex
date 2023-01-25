@@ -1,8 +1,8 @@
 \section{Analysis Strategy}
 \label{sec:AnalysisStrategy}
-We take different analysis approaches between the under and above 3 TeV signal mass points. In the analyses at the under 3 TeV mass points, we adopt the multivariable analyses by training boosted decision tree (BDT) on every mass point. On the other hand, at the above 3 TeV mass points, we adopt the method based on cut-and-counting. We describe these strategies below.
+We take different analysis approaches between the below and above 3 TeV signal mass samples. In the analyses below 3 TeV, we adopt the multivariable analyses by training boosted decision tree (BDT) on every mass point. On the other hand, for the mass points above 3 TeV, we adopt the cut-and-counting approach. We describe these strategies below.
 
-\subsection{Analysis strategy at $M_{H^{+}}, M_{W'} \leq 3$ TeV points}
+\subsection{Analysis strategy below 3 TeV}
 \label{subsec:AnaStrategyUnder3TeV}
 \subsubsection{Event Selection}
 \label{subsubsec:RegionDefUnder3TeV}
@@ -10,9 +10,9 @@ In the analysis below 3 TeV signal mass points, two signal regions, ``SR1'' and 
 
 Figure \ref{fig:EventTopology_Htb} shows the schematic of boosted event topology of an $H^{+}{\rightarrow}tb$ event. A signal event is expected to have one $J_{\text{top-tag}}$, three $b$-jets, and one lepton+MET. However, the $b$-jet originated from the gluon is typically not detectable because it tends to fly in the forward directions and outside the detector acceptance. Therefore, at least two $b$-jets are required in this analysis.
 
-Events in the SR1 are required to have exactly one lepton ($e$ or ${\mu}$) that is matched to the one firing one of the single lepton triggers to be consistent with the signal event as shown in Figure \ref{fig:EventTopology_Htb}. Events must also have at least one top-tagged large-$R$ jet, at least two small-$R$ jets, and exactly two $b$-tagged small-$R$ jets. These small-$R$ jets must additionally satisfy ${\Delta}R(J_{\text{top-tag}}^{1\text{st}}, jet)>1.0$ to ensure these small-$R$ jets are not constituent of the leading top-tagged jet. This analysis does not require missing $E_{T}$. The SR1 becomes enriched in $t\bar{t} + \text{light}$ events after these selections as shown in Figure\ref{fig:BkgComposition_SR1}. Therefore, SR1 is used to control $t\bar{t}+\text{light}$ in the final data fittings.
+Events in the inclusive signal region (SR) are required to have exactly one lepton ($e$ or ${\mu}$) that is matched to the one firing one of the single lepton triggers to be consistent with the signal event, as shown in Figure \ref{fig:EventTopology_Htb}. Events must also have at least one top-tagged large-$R$ jet, at least two small-$R$ jets, and at least two $b$-tagged small-$R$ jets. These small-$R$ jets must additionally satisfy ${\Delta}R(J_{\text{top-tag}}^{1\text{st}}, jet)>1.0$ to ensure these small-$R$ jets are not constituent of the leading top-tagged jet. This analysis does not require missing $E_{T}$. 
 
-Events in the SR2 are required to have one more small-$R$ jet and one more $b$-tagged small-$R$ jet in addition to the requirements of SR1. This region is enriched in $t\bar{t}+\text{heavy flavor jets (HF)}$ events (i.e., $t\bar{t}+\geq{1b}$, $t\bar{t}+\geq{1c}$). 
+Events are further split into SR1 and SR2 depending on the number of b-tagged small-R jets. Those having exactly two (at least three) b-tagged small-R jets are categorized into SR1 (SR2). As shown in Figure \ref{fig:BkgComposition_SR1}, SR1 is enriched in $t\Bar{t}+\text{light}$ events, while SR2 is enriched in $t\Bar{t}+\text{heavy flavor (HF)}$ events. These features can be used to constrain each background in the fit.
 
 %--- Figure of Event Topology
 \begin{figure}[H]
@@ -30,21 +30,21 @@ Events in the SR2 are required to have one more small-$R$ jet and one more $b$-t
     \hline\hline
     Cut                       & SR1                                                         &                           & SR2\\
     \hline
-    leptons                   & $\textbf{N}_{\textbf{lepton}}\mathbf{=1}$                   &                           & \\
+    leptons                   &  - $\text{N}_{\text{lepton}}=1$                             &                           & \\
                               & \underline{Electron}                                        & \underline{Muon}          & Same as SR1\\
                               &  - $p_{\text{T}}>27$ GeV                                    &  - $p_{\text{T}}>27$ GeV  & \\
                               &  - $|\eta|<1.37$ or $1.52<|\eta|<2.47$                      &  - $|\eta|<2.5$           & \\
     \hline
-    Top-tagged large-$R$ jets & $\textbf{N}_{\mathbf{J}_{\textbf{top-tag}}}\mathbf{\geq1}$  &                           &\\
+    Top-tagged large-$R$ jets &  - $\text{N}_{J_{\text{top-tag}}} \geq 1$                   &                           &\\
                               &  - $350~\text{GeV}<p_{\text{T}}<2500~\text{GeV}$            &                           & Same as SR1\\
                               &  - $m>40\text{GeV}$                                         &                           & \\
     \hline
-    Small-$R$ jets            & $\textbf{N}_{\textbf{jet}}\mathbf{\geq 2}$                  &                           & $\textbf{N}_{\textbf{jet}}\mathbf{\geq 3}$ \\
+    Small-$R$ jets            &  - $\text{N}_{\text{jet}} \geq 2$                           &                           & $\text{N}_{\text{jet}} \geq 3$ \\
                               &  - $p_{\text{T}}>25$ GeV                                    &                           & (Kinematic requirements\\
                               &  - $|\eta|<2.5$                                             &                           &  are same as SR1)\\
                               &  - ${\Delta}R(J_{\text{top-tag}}^{1st}, jet)>1.0$           &                           & \\
     \hline
-    $b$-tagged small-$R$ jets & $\textbf{N}_{b-\textbf{jet}}\mathbf{= 2}$                   &                           & $\textbf{N}_{b-\textbf{jet}}\mathbf{\geq 3}$\\
+    $b$-tagged small-$R$ jets & $\text{N}_{b-\text{jet}} = 2$                               &                           & $\text{N}_{b-\text{jet}} \geq 3$\\
 
     \hline\hline
   \end{tabular*}
@@ -83,7 +83,7 @@ Events in the SR2 are required to have one more small-$R$ jet and one more $b$-t
   \label{fig:BkgComposition_SR2}
 \end{figure}
 
-The number of expected signal and background events in the SR1 and SR2 are shown in Table \ref{tab:PrefitYields}. The predicted number of $H^{+}$ signal events for the 1000 and 3000 GeV mass hypothesis assume\\ ${\sigma}(pp{\rightarrow}tbH^{+}){\times}Br(H^{+}{\rightarrow}tb)=0.046$ pb. This is the upper limit at $M_{H^{+}}=1000$ GeV obtained from the resolved analysis, which is the largest upper limit in the mass range\\ $1000{\geq}M_{H^{+}}{\geq}2000$ GeV where both the resolved and the boosted analyses search for $H^{+}$. We use the signal ${\sigma}{\times}Br$ to define the blinded regions.
+The expected number of signal and background events in the SR1 and SR2 are shown in Table \ref{tab:PrefitYields}. For the predicted number of $H^{+}$ signal events with the 1000 and 3000 GeV mass hypothesis, the cross-section of ${\sigma}(pp{\rightarrow}tbH^{+}){\times}Br(H^{+}{\rightarrow}tb)=0.046$ pb is assumed. This corresponds to the upper limit at $M_{H^{+}}=1000$ GeV obtained from the resolved analysis \cite{HDBS-2021-02}. As discussed later in Section \ref{subsec:BlindStrategy}, we use the signal ${\sigma}{\times}Br$ to define the blinded regions.
 
 \begin{table}[H]
   \centering
@@ -108,7 +108,7 @@ The number of expected signal and background events in the SR1 and SR2 are shown
     $H^{+}$ 3000 GeV        & $  60\pm 14$           & $   13\pm  3$ \\
     \hline\hline
   \end{tabular*}
-  \caption{Number of expected and selected events split according to the analysis region. The quoted uncertainties include both statistical and systematic uncertainties before fitting.}
+  \caption{Number of expected events in each analysis region. The quoted uncertainties include both statistical and systematic uncertainties before fitting.}
   \label{tab:PrefitYields}
 \end{table}
 
@@ -391,7 +391,7 @@ In this search, the most important background is $t\bar{t}+\text{jets}$ as discu
     \end{figure}
 
     \item{\textbf{Comparison of BDT distributions between $H^{+} \rightarrow tb$ and  $W' \rightarrow tb$ events}}\mbox{}\\
-    BDT distributions for $W' \rightarrow tb$ events are compared with the ones for $H^{+} \rightarrow tb$ events in Figure \ref{fig:CompHpAndWp}. The large differences above their statistic uncertainty aren't observed. Therefore, it is expected to obtain comparable sensitivity with $H^{+} \rightarrow tb$ analysis without optimizing BDTs using $W' \rightarrow tb$ samples.
+    BDT distributions for $W' \rightarrow tb$ events are compared with the ones for $H^{+} \rightarrow tb$ events in Figure \ref{fig:CompHpAndWp}. The large differences above their statistic uncertainty are not observed. Therefore, it is expected to be able to obtain comparable sensitivity with $H^{+} \rightarrow tb$ analysis without further optimization using $W' \rightarrow tb$ samples.
 
     %--- Comparison of BDT outputs between H+ and W'
     \begin{figure}[H]
@@ -437,9 +437,9 @@ In this search, the most important background is $t\bar{t}+\text{jets}$ as discu
     
 \end{description}
 
-\subsection{Analysis strategy at $M_{H^{+}}, M_{W'} > 3$ TeV points}
+\subsection{Analysis strategy above 3 TeV}
 \label{subsec:AnaStrategyAbove3TeV}
-In analyzing the above 3 TeV mass points, we take a different approach from the above. This is because it is difficult to estimate $t\bar{t}+\text{jets}$ events reliably in the signal region. In Section \ref{subsec:ReweightingTechnique}, we describe the correction method of $t\bar{t}+\text{jets}$ MC prediction to improve the data/MC disagreement. This is performed by data-driven reweighting using the shape of $H_{\text{T}}^{\text{jets}}$ distribution. The reweighting factors have considerable uncertainties in the $H_{\text{T}}^{\text{jets}}>2000$ GeV region due to the meager statistics in this region, as shown in Figure \ref{}. The signal events for the above 3 TeV mass hypotheses distribute in such high $H_{\text{T}}^{\text{jets}}$ region as shown in Figure \ref{fig:SOVERB_HT_jets_4and5TeV}. Therefore, we adopt a conservative approach without relying on the template shapes for signal vs. background separation.
+For the mass point above 3 TeV, we adopt a different approach. Since it is difficult to estimate $t\bar{t}+\text{jets}$ events reliably in the very high $H_{\text{T}}^{\text{jets}}$ region where most of the signal events distribute, we use a cut-and-counting method as detailed below, which avoids using the line shapes at the high $H_{\text{T}}^{\text{jets}}$ region, and therefore is more robust against potential mis-modelling compared with the BDT method. 
 
 \begin{figure}[H]
     \subfloat[]{
@@ -454,7 +454,7 @@ In analyzing the above 3 TeV mass points, we take a different approach from the 
     \label{fig:SOVERB_HT_jets_4and5TeV}
 \end{figure}
 
-One signal region (SR) and two control regions (CR1, CR2) are defined according to the $H_{\text{T}}^{\text{jets}}$ and the number of $b$-jets. The events categorized in the SR are required to have $H_{\text{T}}^{\text{jets}}>2000$ GeV, while events categorized in the CR1 and CR2 are required $H_{\text{T}}^{\text{jets}} \leq 2000$ GeV. Moreover, $\text{N}_{b-\text{jets}} \geq 2$, $\text{N}_{b-\text{jets}}=2$, and $\text{N}_{b-\text{jets}} \geq 3$ are imposed on events categorised in the SR, CR1, and CR2, respectively. After these selections, the CR1 becomes enriched in $t\bar{t}+\text{light}$ events, while the CR2 becomes enriched in $t\bar{t}+\text{HF}$. Therefore, CR1 and CR2 are expected to control $t\bar{t}+\text{jets}$ events. The event selections in these regions are summarized in Table \ref{tab:EventSelectionInSRAndCR1AndCR2}. $H_{\text{T}}^{\text{jets}}$ distributions in these regions are used as final discriminates in the final fitting in Section \ref{}. The number of bins of $H_{\text{T}}^{\text{jets}}$ distribution in the SR is set to one exactly; the analyses of these mass points are performed based on the cut-and-counting (C\&C) method. These distributions and the composition ratio of backgrounds for these regions are shown in Figure \ref{fig:BkgComposition_SR} to Figure \ref{fig:BkgComposition_CR2}. 
+One signal region (SR) and two control regions (CR1, CR2) are defined according to the $H_{\text{T}}^{\text{jets}}$ and the number of $b$-jets. All events are first required to satisfy the same selection criteria for the inclusive SR of the multivariate analysis (discussed in Section \ref{subsubsec:RegionDefUnder3TeV}). They are categorized in the SR if they have $H_{\text{T}}^{\text{jets}}>2000$ GeV, while events with $H_{\text{T}}^{\text{jets}} \leq 2000$ are categorized into the CR1 and CR2, depending on $\text{N}_{b_{\text{jets}}}$. For CR1 (CR2), $\text{N}_{b-\text{jets}}=2 (\geq 3)$ are imposed. After these selections, the CR1 becomes enriched in $t\bar{t}+\text{light}$ events, while the CR2 becomes enriched in $t\bar{t}+\text{HF}$, similarly to SR1 and SR2, respectively, of the multivariate analysis. The event selections in these regions are summarized in Table \ref{tab:EventSelectionInSRAndCR1AndCR2}. $H_{\text{T}}^{\text{jets}}$ is used as final discriminates, as discussed in Section \ref{sec:ProfileLikelohoodFit}. The number of bins of $H_{\text{T}}^{\text{jets}}$ distribution in the SR is set to one. These distributions and the composition ratio of backgrounds for these regions are shown in Figure \ref{fig:BkgComposition_SR} to Figure \ref{fig:BkgComposition_CR2}. 
 
 \begin{table}[H]
     \centering
@@ -466,11 +466,11 @@ One signal region (SR) and two control regions (CR1, CR2) are defined according 
         \hline
         Top-tagged large-$R$ jets    & \multicolumn{3}{c}{Same requirements as Table \ref{tab:EventSelectionInSR1AndSR2}}\\
         \hline
-        Small-$R$ jets               & \multicolumn{2}{c|}{$\textbf{N}_{\textbf{jet}}\mathbf{\geq 2}$}  & $\textbf{N}_{\textbf{jet}}\mathbf{\geq 3}$ \\
+        Small-$R$ jets               & \multicolumn{2}{c|}{$\text{N}_{\text{jet}} \geq 2$}  & $\text{N}_{\text{jet}} \geq 3$ \\
                                      & \multicolumn{2}{c|}{(Kinematic requirements}  & (Kinematic requirements \\
                                      & \multicolumn{2}{c|}{are the same as Table \ref{tab:EventSelectionInSR1AndSR2})} & are the same as Table \ref{tab:EventSelectionInSR1AndSR2})\\
         \hline
-        $b$-tagged small-$R$ jets    & $\textbf{N}_{b-\textbf{jet}}\mathbf{\geq 2}$ & $\textbf{N}_{b-\textbf{jet}}\mathbf{=2}$  & $\textbf{N}_{b-\textbf{jet}}\mathbf{\geq 3}$\\
+        $b$-tagged small-$R$ jets    & $\text{N}_{b-\text{jet}} \geq 2$ & $\text{N}_{b-\text{jet}} = 2$  & $\text{N}_{b-\text{jet}} \geq 3$\\
         \hline
         $H_{\text{T}}^{\text{jets}}$ & $> 2000$ GeV & \multicolumn{2}{c}{$\leq 2000$ GeV}\\
         \hline\hline
@@ -524,7 +524,7 @@ One signal region (SR) and two control regions (CR1, CR2) are defined according 
   \label{fig:BkgComposition_CR2}
 \end{figure}
 
-The number of expected signal and background events in the SR, CR1, and CR2 are shown in Table \ref{tab:PrefitYieldsAbove3TeV}. The predicted number of $H^{+}$ and $W'$ signal events for the 4000 and 5000 GeV mass hypothesis assume $\sigma \times Br = 0.046$ pb as same as Table \ref{tab:PrefitYields}.
+The number of expected signal and background events in the SR, CR1, and CR2 are shown in Table \ref{tab:PrefitYieldsAbove3TeV}. The predicted number of $H^{+}$ and $W'$ signal events for the 4000 and 5000 GeV mass hypothesis are estimated using $\sigma \times Br = 0.046$ pb, as done in Table \ref{tab:PrefitYields}.
 
 \begin{table}[H]
   \centering
