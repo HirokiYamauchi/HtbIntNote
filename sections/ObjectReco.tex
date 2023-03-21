@@ -1,0 +1,62 @@
+\section{Object Reconstruction}
+\label{sec:ObjectReco}
+
+This analysis requires exactly one lepton (electron or muon). Tau leptons are not used, but they are reconstructed only for overlap removals. Large-R jets originated from a top quark and small-R jets originated from $b$-quarks are also required. The large-R jets from top quarks are identified using a top-tagger based on DNN. Only the leading top-tagged large-R jet of all top-tagged large-R jets is used. On the other hand, the small-R jets originated from $b$-quarks are identified using a DL1r $b$-tagging and are required to be ${\Delta}R>1.0$ to the leading top-tagged large-R jet to make sure the $b$-tagged jets are not sub-jets of the leading top-tagged large-R jet. The following describes the requirements for these object reconstructions in detail.
+
+\subsection{Electrons}
+\label{subsec:Electrons}
+Electrons are reconstructed from energy clusters in the electromagnetic calorimeter matched to tracks reconstructed in the inner detector (ID) \cite{PERF-2013-03,ATLAS-CONF-2016-024}, and are required to have $p_\text{T}>10$ GeV and $|\eta|<2.47$. Candidates in the barrel--endcap transition region of the calorimeter ($1.37<|\eta|<1.52$) are excluded. Electrons must satisfy the $tight$ identification criterion based on a likelihood discriminant described in Ref.~\cite{ATLAS-CONF-2016-024} and the following constraints in the longitudinal and transverse impact parameters: $|z_{0}|<0.5$ mm and $|d_{0}|/\sigma_{d_{0}}<5$. The impact parameters are defined with respect to the beamline. Electrons are required to satisfy the $FCTight$ isolate criteria \cite{IsolationSelectionTool}.
+
+\subsection{Muons}
+\label{subsec:Muons}
+Muons are reconstructed from either track segments or full tracks in the muon spectrometer, which are matched to tracks in the ID \cite{PERF-2015-10}. Tracks are then re-fitted using information from both detector systems. Muons are required to have $p_\text{T}>10$ GeV and $|\eta|<2.5$ and the following constraints in the longitudinal and transverse impact parameters: $|z_{0}|<0.5$ mm and $|d_{0}|/\sigma_{d_{0}}<3$. Muons should satisfy the $medium$ identification and the $FCTightTrackOnly$ isolation criteria \cite{IsolationSelectionTool}.
+\subsection{Taus}
+\label{subsec:Taus}
+Hadronically decaying tau leptons ($\tau_{\text{had}}$) are distinguished from jets using the track multiplicity and the $\tau_\text{had}$ identification algorithm based on a recurrent neural network~\cite{ATL-PHYS-PUB-2015-045}. This algorithm exploits the track collimation, jet substructure, kinematic information and so on. These $\tau_{\text{had}}$ candidates are required to have $p_{T}>25$ GeV, $|\eta|<2.5$ and pass the $Medium \tau$-identification working point. Although taus are not used in the analysis, the consistent configuration with the resolved analysis as well as the $ttH(\to bb)$ analysis is kept.
+\subsection{Small-$R$ jets and $b$-tagging}
+\label{subsec:SmallJets}
+Jets are reconstructed using the anti-$k_t$ clustering algorithm \cite{Cacciari:2008gp} on particle-flow objects \cite{PERF-2015-09} with a radius of $R=0.4$. Jets are calibrated using the standard jet calibration procedure, which corrects the jet energy to match on average the true jet energy at the particle level and applies an in-situ correction for data \cite{JETM-2018-05}. The jet collection name in ATLAS is \texttt{AntiKt4EMPFlowJets\_BTagging201903}. Jets are required to have $|\eta|<2.5$ such that they are within the acceptance of the ID and the recommended jet vertex tagging (JVT) requirement \cite{PERF-2014-03} is applied to jets with $p_\text{T}<60$ GeV in order to remove jets originating from the pile-up.
+\vskip.2\baselineskip
+Small-$R$ jets originating from the hadronization of $b$-quarks (referred to as $b$-jets hereafter) are identified using an algorithm based on multivariate techniques to combine information from the impact parameters of displaced tracks as well as properties of secondary and tertiary decay vertices reconstructed within the jets. In this analysis, $b$-tagging relies on the $DL1r$ tagger \cite{FTAG-2018-01}, trained on simulated $t\bar{t}$ events, and the event selection makes use of jets $b$-tagged with the $DL1r$ algorithm at the 70\% efficiency working point.
+\subsection{Large-$R$ jets and top-tagging}
+\label{subsec:LargeJets}
+Top quarks with high transverse momentum ($p_\text{T}\gtrsim2m_{t}$) are expected to result in decay products that are collimated. For top quarks decaying hadronically ($bqq'$), the three quarks may not be resolved as three separate jets. In order to reconstruct these boosted hadronically-decaying top quarks, large-radius (large-$R$) jets are used. The large-$R$ jets are formed from the topological clusters of calorimeter cells which are calibrated to the hadronic energy scale using the local calibration weighting method \cite{PERF-2014-07} and reconstructed using the anti-$k_t$ algorithm with radius parameter of $R=1.0$. The jet collection name in ATLAS is \texttt{AntiKt10LCTopoTrimmedPtFrac5SmallR20Jets}. These jets are further trimmed to remove the effects of pile-up and underlying events. The trimming \cite{D.Krohn:2010} is done by reclustering the original constituents of a large-$R$ jet into a collection of $R_\text{sub}$ subjets using $k_t$ algorithm \cite{S.Catani:1993}. The subjets are then discarded if they carry less than a specific fraction ($f_\text{cut}$) of the $p_\text{T}$ of the original large-$R$ jet. In this analysis, the optimized values ($R_\text{sub}=0.2$, $f_\text{cut}=5$ \%) are used \cite{PERF-2015-03}. The large-$R$ jet energy and mass scale are then calibrated using correction factors derived from simulation. The mass of the large-$R$ jets is calculated using tracking and calorimeter information, the so-called combined mass technique \cite{ATLAS-CONF-2016-035}. Only the large-$R$ jets that satisfy $200<p_\text{T}<3000$ GeV, $|\eta|<2.0$ and $40<m_\text{comb}<600$ GeV are considered in this analysis as recommended by the JetEtMiss group \cite{TwikiForLargeRJetUncert}.
+
+\vskip.2\baselineskip
+The identification of hadronically decaying top quarks that are reconstructed as large-$R$ jets is performed using a multivariate classification algorithm employed in a deep neural network \cite{ATL-PHYS-PUB-2020-017}. In the kinematic region of interest in this search, a single large-$R$ jet captures the top quark decay products, resulting in a characteristic multi-core structure within the jet, in contrast to a typical single-core structure associated with jets in multijet. In order to exploit this characteristic behavior for top quark identification, a multivariate top-tagging classifier was developed. The tagger uses multiple jet-level discriminants as inputs, such as calibrated jet $p_\text{T}$ and mass, information about the dispersion of the jet constituents such as $N$-subjettiness \cite{J.Thaler:2011}, splitting scales \cite{J.Thaler:2008} and energy correlation functions \cite{A.J.Larkoski:2013}. 
+Top-tagging, associated scale factors, and uncertainties are only provided for jets with $350<p_\text{T}<2500$ GeV. The tagger used is optimized for the contained top definition, in which the signal category is defined using jets matched to a truth top quark. In addition, a truth jet matched to the reconstructed jet is required to have a mass above 140 GeV and at least one $b$-hadron ghost matched to it.
+\vskip.2\baselineskip
+%In this analysis, only one leading large-R jet out of top-tagged them using 80\% top-tagging efficiency working point is used.
+In this analysis, large-$R$ jets which pass the 80\% efficiency working point of the contained top-tagging criterion ($J_{\text{top-tagged}}$) are chosen as the boosted top candidates. Especially, the leading boosted top candidate out of them is represented by $J_{\text{top-tagged}}^\text{1st}$ in the following sections.
+\subsection{Overlap Removal}
+\label{subsec:OLR}
+In order to avoid counting a single detector response as more than one lepton or jet, the following overlap removal procedure is applied.
+\vskip.2\baselineskip
+To prevent double-counting of electron energy deposits as jets, the small-$R$ jet within ${\Delta}R_{y}=\sqrt{({\Delta}y)^{2}+({\Delta}\phi)^{2}}=0.2$ of a selected electron is removed. Here, the rapidity is defined as $y=\frac{1}{2}\ln{\frac{E+p_{z}}{E-p_{z}}}$, where $E$ is the energy and $p_{z}$ is the longitudinal component of the momentum along the beam pipe. If the nearest small-$R$ jet surviving that selection is within ${\Delta}R_{y}=0.4$ of the electron, the electron is discarded. In the case that a large-$R$ jet is found within ${\Delta}R=1.0$ of the electron, the large-$R$ jet is removed.\footnote{Following the recommendation for ATLAS analyses in Run 2~\cite{D.Adams:2014}, the overlap removal implemented in the $AssociationUtils$ package \cite{AssociationUtils} is based on ${\Delta}R_{y}$. It is found more appropriate in the case of non-massless objects \cite{arxivOnly:2018}. However, overlap removal for large-$R$ jets is performed in the ttHOffline software and is computed based on ${\Delta}R$.}
+\vskip.2\baselineskip
+Muons are removed if their distance from the nearest small-$R$ jet is within ${\Delta}R_{y}<0.4$. This treatment reduces the background from heavy-flavor decays inside small-$R$ jets. However, if this small-$R$ jet has fewer than three associated tracks, the muon is kept and the small-$R$ jet is removed instead. This avoids an inefficiency for high-energy muons undergoing significant energy loss in the calorimeter.
+\vskip.2\baselineskip
+A ${\tau}_\text{had}$ candidate is rejected if it is within ${\Delta}R_{y}<0.2$ from any selected electron or muon. Also, small-$R$ jets with ${\Delta}R_{y}<0.2$ around a ${\tau}_{had}$ candidate are rejected. The overlap removal with $\tau_\text{had}$ is applied in order to keep consistency with the $t\bar{t}H(\to bb)$ analysis as well as the $H^+ \to tb$ analysis.
+\vskip.2\baselineskip
+Small-$R$ jets within ${\Delta}R<1.0$ of a leading top-tagged large-$R$ jet are removed \footnotemark[6] to prevent double-counting of jet energy deposits. 
+All of the above overlap removal procedures are summarized in Table \ref{tab:OLR}.
+\begin{table}[H]
+  \centering
+  \begin{tabular*}{130mm}{lll}
+    \hline\hline
+    \multicolumn{1}{c}{Reject} & \multicolumn{1}{c}{Against}      & \multicolumn{1}{c}{Criteria}\\
+    \hline
+    Small-$R$ jet              & Electron                         & ${\Delta}R_{y}<0.2$\\
+    Electron                   & Small-$R$ jet                    & $0.2<{\Delta}R_{y}<0.4$\\
+    Small-$R$ jet              & Muon                             & $N_{\text{track}}<3$ in jet and ${\Delta}R_{y}<0.4$\\
+    Muon                       & Small-$R$ jet                    & ${\Delta}R_{y}<0.4$\\
+    ${\tau}_\text{had}$        & Electron                         & ${\Delta}R_{y}<0.2$\\
+    ${\tau}_\text{had}$        & Muon                             & ${\Delta}R_{y}<0.2$\\
+    Small-$R$ jet              & ${\tau}_\text{had}$              & ${\Delta}R_{y}<0.2$\\
+    Large-$R$ jet              & Electron                         & ${\Delta}R    <1.0$\\
+    Small-$R$ jet              & Leading top-tagged large-$R$ jet & ${\Delta}R    <1.0$\\
+    \hline\hline
+  \end{tabular*}
+  \caption{Summary of overlap removal procedures in this analysis.}
+  \label{tab:OLR}
+\end{table}
